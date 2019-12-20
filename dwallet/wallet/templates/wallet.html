@@ -1,0 +1,16 @@
+{% extends 'dwallet/base.html' %}
+
+{% block content %}
+
+{% if address %}
+<center>
+<h1>
+{{address}}
+</h1>
+
+{% load qr_code%}
+{% qr_from_text qr size="s" image_format="png" error_correction="L" %}
+</center>
+{% endif %}
+
+{% endblock %}

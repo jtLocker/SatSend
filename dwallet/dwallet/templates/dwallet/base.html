@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Our Website Name </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dwallet.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+      <ul class="navlist">
+        <div class = "navpadright">
+          {% include 'dwallet/includes/navbaritems.html' %}
+        </div>
+      </ul>
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
+  </body>
+</html>

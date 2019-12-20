@@ -1,0 +1,23 @@
+{% extends 'dwallet/base.html' %}
+
+{% block content %}
+
+
+{% if error %}
+{{error}}
+{% endif %}
+
+<form class="centerform" method = "POST" action="{% url 'friend_req' %}">
+{% csrf_token %}
+<h1>Add friend</h1>
+
+<select id="dropdown">
+{% for user in all_users %}
+    <option>{{user}}</option>
+{% endfor %}
+</select>
+
+<input class= "btn btn-secondary" type="submit" value = "Send Request">
+
+</form>
+{% endblock %}

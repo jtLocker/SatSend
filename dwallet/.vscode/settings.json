@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "C:\\Users\\jackt\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "git.ignoreLimitWarning": true
+
+}

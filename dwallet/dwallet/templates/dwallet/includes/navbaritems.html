@@ -1,0 +1,12 @@
+
+{% if user.is_authenticated %}
+    {% if user.profile.image_exist %}
+        <li class="right profileimagenav"><a href={% url 'account' %}><img class="profileimage" src="{{user.profile.image.url}}"></a></li>
+    {% else %}
+        <li class="right navitem"><a href={% url 'account' %}>{{user.username|title}}</a></li>
+    {% endif %}
+    <li class="right navitem"><a href={% url 'logout' %}>Logout</a></li>
+{% else %}
+    <li class="right navitem"><a href={% url 'login' %}>Login</a></li>
+    <li class="right navitem"><a href={% url 'signup' %}>Signup</a></li>
+{% endif %}
